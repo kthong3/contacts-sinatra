@@ -1,3 +1,7 @@
-<div class="contact">
-  Parsing data ...
+<div class="contact-list">
+  <% @contacts.each do |contact| %>
+    <div class="contact">
+      <a href="/contact/<%= contact["id"] %>"> <%= contact["name"] %></a>
+    </div>
+  <% end %>
 </div>
