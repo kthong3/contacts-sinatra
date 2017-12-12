@@ -12,7 +12,8 @@ gem 'activerecord', '~>4.2.0'
 
 gem 'shotgun'
 gem 'rake'
-# gem 'bcrypt'
+gem 'json'
+gem 'rest-client'
 
 group :test do
   gem 'shoulda-matchers'
