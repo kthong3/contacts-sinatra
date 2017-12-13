@@ -1,4 +1,4 @@
-Project
+Project: Create an responsive app that fetches JSON from a URL.
 1. Choose stack 
   Ruby
   Sinatra without backend 
