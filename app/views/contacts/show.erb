@@ -63,12 +63,27 @@
         <p>ADDRESS:</p>
         <p>
           <div>
-            <p><%= @contact["address"]["street"] %></p>
+            <span>
+              <%= @contact["address"]["street"] %>
+            </span>
+            <span>
+              <%= @contact["address"]["city"] %>, <%= @contact["address"]["state"] %> <%= @contact["address"]["zipCode"] %>, <%= @contact["address"]["country"] %>
+            </span>
           </div>
         </p>
       </div>
     <% end %>
 
+    <% if @contact["birthdate"] != nil %>
+      <div>
+        <p>BIRTHDATE:</p>
+        <p>
+          <div>
+            <%= @contact["birthdate"] %>
+          </div>
+        </p>
+      </div>
+    <% end %>
 
 
 
