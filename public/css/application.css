@@ -6,11 +6,36 @@ body {
 }
 
 a:link {
-    text-decoration: none;
+  text-decoration: none;
+  color: black;
 }
 
 a:visited {
-    text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a.blue-link {
+  color: #00BFFF;
+}
+
+#favorites > span, #other-contacts > span {
+  background-color: gray;
+  text-align: left;
+}
+
+td {
+  padding: 5px;
 }
 
 @media screen and (min-width: 320px) {
@@ -48,10 +73,6 @@ a:visited {
     grid-template-rows: auto 1fr;
     padding-left: 5px;
     padding-right: 5px;
-  }
-
-  #favorites > span, #other-contacts > span {
-    background-color: gray;
   }
 
   #other-contacts {
@@ -162,10 +183,6 @@ a:visited {
     grid-template-rows: auto 1fr;
     padding-left: 5px;
     padding-right: 5px;
-  }
-
-  #favorites > span, #other-contacts > span {
-    background-color: gray;
   }
 
   #other-contacts {
