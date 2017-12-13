@@ -8,5 +8,10 @@ end
 
 # show
 get '/contact/:id' do
+  response = RestClient.get 'https://s3.amazonaws.com/technical-challenge/v3/contacts.json', {accept: :json}
+  @contacts = JSON.parse(response)
 
+  @contact = @contacts.find { |contact| contact["id"] == params[:id].to_s }
+  p @contact
+  erb :"contacts/show"
 end
