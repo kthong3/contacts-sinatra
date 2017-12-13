@@ -7,12 +7,11 @@
     <span>Favorites</span>
     <% @contacts.each do |contact| %>
       <% if is_favorite(contact) %>
-        <div class="contact">
-          <div class="image-sm"></div>
-          <div class="image-lg"></div>
-          <p><a href="/contact/<%= contact["id"] %>"> <%= contact["name"] %></a></p>
-          <p><%= contact["companyName"] %></p>
-        </div>
+        <a href="/contact/<%= contact["id"] %>">
+          <div class="contact">
+
+          </div>
+        </a>
       <% end %>
   <% end %>
   </div>
@@ -21,10 +20,29 @@
     <span>Other Contacts</span>
     <% @contacts.each do |contact| %>
       <% if other_contact(contact) %>
-        <div class="contact">
-          <p><a href="/contact/<%= contact["id"] %>"> <%= contact["name"] %></a></p>
-          <p><%= contact["companyName"] %></p>
-        </div>
+        <a href="/contact/<%= contact["id"] %>">
+          <table>
+            <tr>
+            <td>
+              <div class="image-sm">
+                <img src="<%= contact["smallImageURL"] %>">
+              </div>
+              <div class="image-lg">
+                <img src="<%= contact["largeImageURL"] %>">
+              </div>
+            </td>
+            <td>
+              <p>
+                <%= contact["name"] %>
+              </p>
+              <p>
+                <%= contact["companyName"] %>
+              </p>
+            </td>
+            </tr>
+          </table>
+          </div>
+        </a>
       <% end %>
     <% end %>
   </div>
