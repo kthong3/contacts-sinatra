@@ -1,0 +1,124 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+@media screen and (min-width: 320px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .contact-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr;
+    text-align: center;
+    margin: 5px;
+    border: 5px solid black;
+    padding: 5px;
+  }
+
+  #header {
+    grid-column: 1/1;
+    text-align: center;
+    margin: 5px;
+    border: 5px solid orange;
+    background-color: #D8D8D8;
+  }
+
+  #favorite-contacts {
+    grid-column: 1/1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 5px;
+    border: 5px dashed blue;
+    padding: 5px;
+  }
+
+  #other-contacts {
+    grid-column: 1/1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 5px;
+    border: 5px dashed green;
+    padding: 5px;
+  }
+
+  .contact {
+    grid-column: 1/1;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .contact-list {
+    grid-column: 1/1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  #header {
+    grid-column: 1/1;
+    grid-row: 1/2;
+    text-align: center;
+    margin: 5px;
+    border: 5px solid orange;
+    background-color: #D8D8D8;
+  }
+
+  #favorite-contacts {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 5px;
+    border: 5px dashed blue;
+    padding: 5px;
+  }
+
+  #other-contacts {
+    grid-column: 1/1;
+    grid-row: 4/6;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    margin: 5px;
+    border: 5px dashed green;
+    padding: 5px;
+  }
+
+  .contact {
+    grid-column: 1/1;
+    text-align: center;
+    margin: 5px;
+    border: 5px solid black;
+    padding: 5px;
+    background-color: white;
+  }
+}
+
+h1 {
+
+}

@@ -1,3 +1,27 @@
-<div class="contact">
-  Parsing data ...
+<div class="contact-list">
+  <div id="header">
+    <h1>Contacts</h1>
+  </div>
+
+  <div id="favorites">
+    <% @contacts.each do |contact| %>
+      <% if is_favorite(contact) %>
+        <div class="contact">
+          <p><a href="/contact/<%= contact["id"] %>"> <%= contact["name"] %></a></p>
+          <p><%= contact["companyName"] %></p>
+        </div>
+      <% end %>
+  <% end %>
+  </div>
+
+  <div id="other-contacts">
+    <% @contacts.each do |contact| %>
+      <% if other_contact(contact) %>
+        <div class="contact">
+          <p><a href="/contact/<%= contact["id"] %>"> <%= contact["name"] %></a></p>
+          <p><%= contact["companyName"] %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
