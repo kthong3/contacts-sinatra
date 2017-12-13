@@ -8,6 +8,8 @@
     <% @contacts.each do |contact| %>
       <% if is_favorite(contact) %>
         <div class="contact">
+          <div class="image-sm"></div>
+          <div class="image-lg"></div>
           <p><a href="/contact/<%= contact["id"] %>"> <%= contact["name"] %></a></p>
           <p><%= contact["companyName"] %></p>
         </div>
