@@ -1,9 +1,10 @@
 <div class="contact-list">
-  <div id="header">
+  <div class="header">
     <h1>Contacts</h1>
   </div>
 
   <div id="favorites">
+    <span>Favorites</span>
     <% @contacts.each do |contact| %>
       <% if is_favorite(contact) %>
         <div class="contact">
@@ -15,6 +16,7 @@
   </div>
 
   <div id="other-contacts">
+    <span>Other Contacts</span>
     <% @contacts.each do |contact| %>
       <% if other_contact(contact) %>
         <div class="contact">
