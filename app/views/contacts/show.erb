@@ -4,7 +4,11 @@
       <a href="/" class="blue-link">< Contacts</a>
     </div>
     <div class="star">
-      star
+      <% if is_favorite(@contact) %>
+        <img src="/images/fave_star_true/Favorite — True.png">
+      <% else %>
+        <img src="images/fave_star_false/Favorite — False.png">
+      <% end %>
     </div>
   </div>
 

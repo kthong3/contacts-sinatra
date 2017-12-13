@@ -12,6 +12,5 @@ get '/contact/:id' do
   @contacts = JSON.parse(response)
 
   @contact = @contacts.find { |contact| contact["id"] == params[:id].to_s }
-  p @contact
   erb :"contacts/show"
 end
