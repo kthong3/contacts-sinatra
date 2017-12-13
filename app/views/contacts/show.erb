@@ -1,39 +1,77 @@
-<div class="contact-info">
+<div class="contact-wrapper">
   <div class="contact-header">
     <div class="home">
       <a href="/">< Contacts</a>
     </div>
-    <div class="star">star
+    <div class="star">
+      star
     </div>
   </div>
 
-  <div class="personal">
+  <div class="contact-name">
+    <h1><%= @contact["name"] %></h1>
+    <% if @contact["companyName" != nil] %>
       <p><%= @contact["name"] %></p>
-      <% if @contact["companyName" != nil] %>
-        <p><%= @contact["name"] %></p>
-      <% end %>
-    </div>
-    <div>
-      <p></p>
-      <p></p>
-    </div>
-    <div>
-      <p></p>
-    </div>
-    <div>
-      <p></p>
-    </div>
-    <div>
-      <p></p>
-    </div>
-    <div>
-      <p></p>
-    </div>
-    <div>
-      <p></p>
-    </div>
-
+    <% end %>
   </div>
 
+  <div class="contact-info">
+    <% if @contact["phone"]["home"] != nil %>
+      <div>
+        <p>PHONE:</p>
+        <p>
+          <div class="left">
+            <%= @contact["phone"]["home"] %>
+          </div>
+          <div class="right">
+            Home
+          </div>
+        </p>
+      </div>
+    <% end %>
+
+    <% if @contact["phone"]["mobile"] != nil %>
+      <div>
+        <p>PHONE:</p>
+        <p>
+          <div class="left">
+            <%= @contact["phone"]["mobile"] %>
+          </div>
+          <div class="right">
+            Mobile
+          </div>
+        </p>
+      </div>
+    <% end %>
+
+    <% if @contact["phone"]["work"] != nil %>
+      <div>
+        <p>PHONE:</p>
+        <p>
+          <div>
+            <%= @contact["phone"]["work"] %>
+          </div>
+          <div>
+            Work
+          </div>
+        </p>
+      </div>
+    <% end %>
+
+    <% if @contact["address"] != nil %>
+      <div>
+        <p>ADDRESS:</p>
+        <p>
+          <div>
+            <p><%= @contact["address"]["street"] %></p>
+          </div>
+        </p>
+      </div>
+    <% end %>
+
+
+
+
+  </div>
 
 </div>

@@ -60,7 +60,7 @@ body {
     background-color: white;
   }
 
-  .contact-info {
+  .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -79,7 +79,7 @@ body {
     padding: 5px;
   }
 
-  .contact-home{
+  .home {
     grid-column: 1/3;
   }
 
@@ -88,17 +88,29 @@ body {
     text-align: right;
   }
 
-  .personal {
+  .contact-name {
     grid-column: 1/1;
     text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .contact-info {
+    grid-column: 1/1;
     border: 1px solid black;
     padding: 5px;
     background-color: white;
   }
 
-  .personal > div {
+  .contact-info > div.left {
     text-align: left;
-    border: 1px solid black;
+    border: 1px solid blue;
+    padding: 5px;
+    background-color: white;
+  }
+  .contact-info > div.right {
+    text-align: right;
+    border: 1px solid pink;
     padding: 5px;
     background-color: white;
   }
@@ -171,4 +183,8 @@ body {
     border: 1px solid purple;
     padding: 5px;
   }
+
+  .right-label {
+  text-align: right;
+}
 }
